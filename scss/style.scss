@@ -11,12 +11,14 @@
 @import "variables";
 @import "typography";
 @import "navigation";
+@import "portfolio";
 @import "sidebar";
 @import "comments";
 @import "footer";
 
 body {
-	background-color: $col-dark;
+	// background-color: $col-dark;
+	background-image: url(../dustin-ruetz-theme/img/escheresque-ste.png);
 	color: white;
 }
 
@@ -26,7 +28,7 @@ header {
 	}
 }
 
-.page-section {
+#about {
 	height: 100vh;
 }
 
