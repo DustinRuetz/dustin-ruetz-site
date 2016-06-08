@@ -1,27 +1,22 @@
 // Dark background
-$color-dark: rgb(35, 35, 35); // #1f1f1f
-
-
+$col-dark: rgb(35, 35, 35); // #1f1f1f
 // Grey-white text
-$color-light: rgb(218, 218, 218); // #dadada
-
-
+$col-light: rgb(218, 218, 218); // #dadada
 // White text
-$color-white: rgb(255, 255, 255); // #fff
+$col-white: rgb(255, 255, 255); // #fff
 
 
-// PSD reds and maroons
-$color-red: rgb(239, 83, 80); // #ef5350
-$color-maroon: rgb(128, 2, 0); // #800200
+
+$col-accent: #3970c6;
+$old-blue: #2b90d9;
+$col-green: #53bdaf;
+
 
 
 // ==================================================
 
 
-$color-yellow: rgb(242, 242, 105); // #f2f269
-$color-blue-med: rgb(44, 128, 188); // #2c80bc
-$color-blue-dark: rgb(46, 114, 162); // #2e72a2
 
-$the-blue: #3970c6;
-$old-blue: #2b90d9;
-$jeanne-green: #53bdaf;
+// PSD reds and maroons
+$col-red: rgb(239, 83, 80); // #ef5350
+$col-maroon: rgb(128, 2, 0); // #800200

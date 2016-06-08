@@ -13,11 +13,11 @@ p {
 
 // Anchor Links
 a {
-	color: #ba209b;
+	color: $col-light;
 	font-family: 'Roboto', sans-serif;
 	text-decoration: none;
 	&:hover {
-		color: #d424b1;
+		// color: #d424b1;
 	}
 }
 
