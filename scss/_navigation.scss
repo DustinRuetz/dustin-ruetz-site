@@ -1,14 +1,54 @@
-ul.menu {
-	margin: 0;
+.nav-container {
+	// Positioning
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#main-nav {
+	// Display
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	// Positioning
+	position: fixed;
+}
+#menu-primary-nav {
+	// Content, Padding, Border, Margin
 	padding: 0;
+	margin: 0;
+	// Display
+	display: flex;
+	flex-direction: column;
+	// Font, Typography
+	text-align: right;
+	text-transform: uppercase;
+	// Lists
+	list-style-type: none;
+	// Positioning
+	position: fixed;
+
 	li {
-		display: inline;
-		margin-right: 10px;
-		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
-			color: white;
-		}
+		padding: 25px 0;
+	}
+
+	a {
+		
 	}
 }
+
+// Default HY Styling
+
+// ul.menu {
+// 	margin: 0;
+// 	padding: 0;
+// 	li {
+// 		display: inline;
+// 		margin-right: 10px;
+// 		a {
+// 			color: #333;
+// 			padding: 10px;
+// 			background: #333;
+// 			color: white;
+// 		}
+// 	}
+// }

@@ -1,19 +1,38 @@
-<?php get_header();  ?>
+<?php get_header(); ?>
 
-<div class="main">
-  <div class="container">
+<main>
+	<div class="container">
 
-    <div class="content">
-      <?php // Start the loop ?>
-      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+		<!-- <div class="content"> -->
 
-        <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
+		<section id="about" class="page-section">
+			
+		</section>
 
-      <?php endwhile; // end the loop?>
-    </div> <!-- /,content -->
+		<section id="portfolio" class="page-section">
+			<h2>Portfolio</h2>
+		</section>
 
-  </div> <!-- /.container -->
-</div> <!-- /.main -->
+		<section id="skills" class="page-section">
+			<h2>Skills</h2>
+		</section>
+
+		<section id="contact" class="page-section">
+			<h2>Contact</h2>
+		</section>
+
+		<?php // Start the loop ?>
+			<?php if ( have_posts() )
+				while ( have_posts() ) :
+					the_post(); ?>
+
+			<h2> <?php the_title(); ?> </h2>
+			<?php the_content(); ?>
+
+		<?php endwhile; // End the loop ?>
+		<!-- </div> /.content -->
+
+	</div>
+</main>
 
 <?php get_footer(); ?>

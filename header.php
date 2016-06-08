@@ -19,10 +19,23 @@
 					<?php bloginfo( 'name' ); ?>
 				</a>
 			</h1>
+			
+			<div class="nav-container">
+				<!-- Main navbar (includes logo and page links) -->
+				<nav id="main-nav">
+					<?php $siteLogo = get_field('site_logo', 'option') ?>
+					<img src='<?php echo $siteLogo[sizes][medium] ?>'>
 
-			<?php wp_nav_menu( array(
-				'container' => false,
-				'theme_location' => 'primary'
-			)); ?>
+					<?php wp_nav_menu( array(
+						'container' => false,
+						'theme_location' => 'primary'
+					)); ?>
+				</nav>
+			</div>
+
+			<?php // wp_nav_menu( array(
+				// 'container' => false,
+				// 'theme_location' => 'primary'
+			// )); ?>
 		</div> <!-- /.container -->
 	</header>
