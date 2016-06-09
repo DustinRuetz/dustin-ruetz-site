@@ -11,31 +11,16 @@
 </head>
 
 <body <?php body_class(); ?> >
-
-	<header>
-		<div class="container">
-			<h1>
-				<a href=" <?php echo home_url( '/' ); ?> " title=" <?php bloginfo( 'name', 'display' ); ?> " rel="home">
-					<?php bloginfo( 'name' ); ?>
-				</a>
-			</h1>
-			
-			<div class="nav-container">
-				<!-- Main navbar (includes logo and page links) -->
-				<nav id="main-nav">
-					<?php $siteLogo = get_field('site_logo', 'option') ?>
-					<img src='<?php echo $siteLogo[sizes][medium] ?>'>
-
-					<?php wp_nav_menu( array(
-						'container' => false,
-						'theme_location' => 'primary'
-					)); ?>
-				</nav>
-			</div>
-
+	<!-- <header> -->
+		<!-- <h1> -->
+			<!-- <a href=" <?php // echo home_url( '/' ); ?> " title=" <?php // bloginfo( 'name', 'display' ); ?> " rel="home"> -->
+				<?php // bloginfo( 'name' ); ?>
+			<!-- </a> -->
+		<!-- </h1> -->
+		
+		<!-- <nav id="main-nav"> -->
 			<?php // wp_nav_menu( array(
 				// 'container' => false,
-				// 'theme_location' => 'primary'
-			// )); ?>
-		</div> <!-- /.container -->
-	</header>
+				// 'theme_location' => 'primary' )) ?>;
+		<!-- </nav> -->
+	<!-- <header> -->

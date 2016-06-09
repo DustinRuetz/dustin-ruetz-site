@@ -42,8 +42,15 @@ add_action( 'after_setup_theme', 'theme_setup' );
 
 function hackeryou_styles() {
 	wp_enqueue_style('style', get_stylesheet_uri() );
-	wp_enqueue_style('raleway', 'https://fonts.googleapis.com/css?family=Raleway:400,800');
-	wp_enqueue_style('roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,900');
+	wp_enqueue_style('Arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700');
+	wp_enqueue_style('Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,700');
+	wp_enqueue_style('Pacifico', 'https://fonts.googleapis.com/css?family=Pacifico');
+
+	wp_enqueue_style('Roboto Slab', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+
+	wp_enqueue_style('Roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+	
 
 	// TBdeleted
 	// wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');

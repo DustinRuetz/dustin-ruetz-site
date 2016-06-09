@@ -1,22 +1,13 @@
-// Dark background
-$col-dark: rgb(35, 35, 35); // #1f1f1f
-// Grey-white text
-$col-light: rgb(218, 218, 218); // #dadada
-// White text
-$col-white: rgb(255, 255, 255); // #fff
+// Leighton Beach color theme
+// https://color.adobe.com/Leighton-Beach-color-theme-7748230/
+$col1-dark: rgb(21, 51, 81);       // #153351 // dark-blue
+$col1-med: rgb(74, 187, 199);      // #4abbc7 // med-blue
+$col2-light: rgb(255, 255, 255);   // #ffffff // full-white
+$col2-med: rgb(252, 216, 157);     // #fcd89d // med-tan
+$col3: rgb(187, 194, 196);         // #bbc2c4 // light-grey
+$col4: rgb(41, 41, 41); 		   // #292929 // off-black
 
-
-
-$col-accent: #3970c6;
-$old-blue: #2b90d9;
-$col-green: #53bdaf;
-
-
-
-// ==================================================
-
-
-
-// PSD reds and maroons
-$col-red: rgb(239, 83, 80); // #ef5350
-$col-maroon: rgb(128, 2, 0); // #800200
+@mixin font-size($fsValue: 0.625) {
+  font-size: $fsValue + px;
+  font-size: ($fsValue / 10) + rem;
+}

@@ -1,38 +1,16 @@
-.nav-container {
-	width: 100px;
-	// Positioning
-	position: absolute;
-	top: 0;
-	right: -5px;
-}
 #main-nav {
-	// Display
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	// Positioning
-	position: fixed;
-}
-#menu-primary-nav {
-	// Content, Padding, Border, Margin
-	padding: 0;
-	margin: 0;
-	// Display
-	display: flex;
-	flex-direction: column;
-	// Font, Typography
-	text-align: right;
-	// Lists
-	list-style-type: none;
-	// Positioning
-	position: fixed;
+
+	ul {
+		padding: 0;
+		margin: 0;
+	}
 
 	li {
-		padding: 25px 0;
+		display: inline-block;
 	}
 
 	a {
-		
+		color: $col1-med;
 	}
 }
 
