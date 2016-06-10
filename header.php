@@ -9,18 +9,4 @@
 	<!-- stylesheets should be enqueued in functions.php -->
 	<?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?> >
-	<!-- <header> -->
-		<!-- <h1> -->
-			<!-- <a href=" <?php // echo home_url( '/' ); ?> " title=" <?php // bloginfo( 'name', 'display' ); ?> " rel="home"> -->
-				<?php // bloginfo( 'name' ); ?>
-			<!-- </a> -->
-		<!-- </h1> -->
-		
-		<!-- <nav id="main-nav"> -->
-			<?php // wp_nav_menu( array(
-				// 'container' => false,
-				// 'theme_location' => 'primary' )) ?>;
-		<!-- </nav> -->
-	<!-- <header> -->

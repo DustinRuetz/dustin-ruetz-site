@@ -42,17 +42,17 @@ add_action( 'after_setup_theme', 'theme_setup' );
 
 function hackeryou_styles() {
 	wp_enqueue_style('style', get_stylesheet_uri() );
-	wp_enqueue_style('Arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700');
-	wp_enqueue_style('Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,700');
-	wp_enqueue_style('Pacifico', 'https://fonts.googleapis.com/css?family=Pacifico');
-
+	
 	wp_enqueue_style('Roboto Slab', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 
 	wp_enqueue_style('Roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700');
 
-	
-
 	// TBdeleted
+
+	// wp_enqueue_style('Arvo', 'https://fonts.googleapis.com/css?family=Arvo:400,700');
+	// wp_enqueue_style('Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,700');
+	// wp_enqueue_style('Pacifico', 'https://fonts.googleapis.com/css?family=Pacifico');
+
 	// wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 }
 
@@ -66,7 +66,7 @@ function hackeryou_scripts() {
 
 	// Load jQuery from CDN link instead
 	wp_enqueue_script(
-		'jquery',
+		'jQuery',
 		"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js",
 		false, // dependencies
 		null, // version number
@@ -74,8 +74,16 @@ function hackeryou_scripts() {
 	);
 
 	wp_enqueue_script(
+		'scrollTo', // handle
+		get_template_directory_uri() . '/js/jquery.scrollTo.min.js', // Source
+		'jQuery', // dependencies
+		null, // version number
+		true // load in footer
+	);
+
+	wp_enqueue_script(
 		'plugins', // handle
-		get_template_directory_uri() . '/js/plugins.js', //source
+		get_template_directory_uri() . '/js/plugins.js', // Source
 		false, // dependencies
 		null, // version number
 		true // load in footer
@@ -83,10 +91,10 @@ function hackeryou_scripts() {
 
 	wp_enqueue_script(
 		'scripts', // handle
-		get_template_directory_uri() . '/js/scripts.min.js', //source
-		array( 'jquery', 'plugins' ), //dependencies
+		get_template_directory_uri() . '/js/scripts.min.js', // Source
+		array( 'jQuery', 'scrollTo', 'plugins' ), // Dependencies
 		null, // version number
-		true //load in footer
+		true // Load in footer
 	);
 }
 

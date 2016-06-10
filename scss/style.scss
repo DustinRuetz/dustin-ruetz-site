@@ -29,6 +29,8 @@ html {
 }
 
 body {
+	// background-color: $col2-med;
+	// Content, Padding, Border, Margin
 	padding: 0;
 	margin: 0;
 }
@@ -38,30 +40,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1,
-h2 {
+h2,
+h4 {
 	// Font, Typography
-	font-family: 'Pacifico', cursive;
+	font-family: 'Roboto Slab', serif;
 }
 
 h1 {
-	color: $col2-light;
+	// color: $col2-light;
 	// Font, Typography
 	@include font-size(75);
 	font-weight: normal;
-	letter-spacing: 8px;
 }
 
 h2 {
 	padding-left: 25px;
 	@include font-size(50);
-	// font-family: 'Arvo', serif;
-	font-family: 'Roboto Slab', serif;
 }
 
 h3 {
 	// Font, Typography
-	// font-family: 'Arvo', serif;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	@include font-size(16);
 }
 
@@ -69,10 +68,8 @@ a,
 p {
 	margin: 0;
 	// Font, Typography
-	// font-family: 'Montserrat', sans-serif;
 	font-family: 'Roboto', sans-serif;
 	@include font-size(16);
-	// font-family: 'Arvo', serif;
 }
 
 a {
@@ -94,50 +91,96 @@ img {
 // Major page sections
 // ==================================================
 
+.full-page {
+	// Display
+	display: flex;
+	justify-content: space-between;
+}
+
+.page-content {
+	// Dimensions
+	width: calc(100% - 172px);
+}
+
 .page-section {
+	border: 1px solid black; // TBdeleted
 	// Dimensions
 	height: 100vh;
 	// Display
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-#fp-header {
-	background-color: $col4;
+.container {
+	// Content, Padding, Border, Margin
+	padding: 0 20px;
+	margin: 0 auto;
+	// Dimensions
+	max-width: 1080px;
 }
 
-.w25,
-.w75 {
+// ==================================================
+// -#home
+// ==================================================
+
+.nav-sidebar,
+.nav-main {
+	height: 100vh;
+}
+
+.nav-main {
+	// Color
+	// background-color: $col1-med;
+	// Content, Padding, Border, Margin
+	padding: 0 40px;
 	// Display
 	display: flex;
 	align-items: center;
+	position: fixed;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		// Display
+		display: flex;
+		flex-direction: column;
+	}
+
+	li {
+		margin: 5px 0;
+		display: inline-block;
+	}
+
+	a {
+		color: $col4;
+		// Content, Padding, Border, Margin
+		padding: 0 0 5px 5px;
+		border-bottom: 2px solid transparent;
+		border-left: 2px solid transparent;
+		// Font, Typography
+		@include font-size(18);
+		// Transform, Transition
+		transition: all 0.3s ease-in-out;
+	}
+
+	a.current-section {
+		border-bottom: 2px solid $col2-med;
+		border-left: 2px solid $col2-med;
+		color: $col2-med;
+	}
 }
 
-.w25 {
-	width: 25%;
-	// Display
+.homepage-header {
+	// background-color: $col4;
 }
 
-.w50 {
-	width: 50%;
-}
-
-.w75 {
-	width: 75%;
-}
-
-// ==================================================
-// - #fp-header
-// ==================================================
-
-#fp-header {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.name-title {
+	width: 100%;
 	text-align: center;
 
 	h3 {
 		color: $col1-med;
-		padding-top: 50px;
 		text-transform: uppercase;
 	}
 }
@@ -147,11 +190,10 @@ img {
 // ==================================================
 
 #about {
+
 	.w25 {
-		// Colour
-		background-color: $col1-med;
 		// Positioning
-		position: relative;
+		// position: relative;
 	}
 
 	.w75 {
@@ -186,32 +228,18 @@ img {
 // ==================================================
 
 #work {
-	display: flex;
+		border: 1px solid black;
+	// display: flex;
 
 	.w75 {
 		& div:nth-of-type(1) {
-			background-color: $col1-dark;
+			// background-color: $col1-dark;
 			
 		}
 
 		& div:nth-of-type(2) {
 			
 		}
-	}
-}
-
-#work {
-
-	
-	.section-title {
-		// Colour
-		background-color: $col1-dark;
-		// Display
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: space-around;
-
 	}
 }
 
@@ -300,7 +328,7 @@ img {
 
 #skills {
 	.w25 {
-		background-color: orange;
+		// background-color: orange;
 	}
 }
 
@@ -310,7 +338,7 @@ img {
 
 #contact {
 	.w25 {
-		background-color: salmon;
+		// background-color: salmon;
 	}
 }
 
