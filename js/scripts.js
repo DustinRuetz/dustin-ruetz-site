@@ -1,7 +1,11 @@
 $(function() {
 
-	console.log("It's alive!");
-	console.log("Customization complete.");
+	// #toggle-labels button in the Skills section
+	$("#toggle-labels").on("click", function(event) {
+		event.preventDefault();
+		$(".skill-text").toggleClass("label-toggle");
+	});
+
 
 	// This part does the "fixed navigation after scroll" functionality. We use the jQuery function scroll() to recalculate our variables as the page is scrolled.
 

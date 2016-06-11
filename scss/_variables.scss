@@ -1,11 +1,10 @@
-// Leighton Beach color theme
-// https://color.adobe.com/Leighton-Beach-color-theme-7748230/
-$col1-dark: rgb(21, 51, 81);       // #153351 // dark-blue
-$col1-med: rgb(74, 187, 199);      // #4abbc7 // med-blue
-$col2-light: rgb(255, 255, 255);   // #ffffff // full-white
-$col2-med: rgb(252, 216, 157);     // #fcd89d // med-tan
-$col3: rgb(187, 194, 196);         // #bbc2c4 // light-grey
-$col4: rgb(41, 41, 41); 		   // #292929 // off-black
+// Colour palette
+// http://www.colourlovers.com/palette/4267228
+$col1-dark: rgb(41, 143, 203);   // #298fcb   dark-blue
+$col1-med: rgb(70, 193, 255);    // #46c1ff   medium-blue
+$col1-light: rgb(179, 231, 247); // #b3e7f7   light-blue
+$col2: rgb(103, 198, 190);       // #67c6be   off-green
+$col3: rgb(40, 49, 56);          // #283138   off-black
 
 @mixin font-size($fsValue: 0.625) {
   font-size: $fsValue + px;
