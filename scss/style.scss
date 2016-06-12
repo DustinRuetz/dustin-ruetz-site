@@ -109,7 +109,7 @@ img {
 	// Content, Padding, Border, Margin
 	padding: 0 100px;
 	// Dimensions
-	width: calc(100% - 160px);
+	width: calc(100% - 164px);
 }
 
 .page-section {
@@ -121,12 +121,34 @@ img {
 	justify-content: center;
 }
 
+.dark-to-light {
+	transition: all 0.3s;
+	
+	&:focus,
+	&:hover {
+		// Colour
+		background-color: white;
+		color: $col3;
+	}
+}
+
+.border-underline {
+	// Outline
+	outline: none;
+	// Transform, Transition
+	transition: all 0.3s;
+	&:focus,
+	&:hover {
+		border-bottom: 5px solid $col1-dark;
+	}
+}
+
 // ==================================================
 // -.nav-sidebar
 // ==================================================
 
 .nav-sidebar {
-	div {
+	> div {
 		// Colour
 		background-color: $col1-dark;
 		// Dimensions
@@ -138,6 +160,32 @@ img {
 		// Positioning
 		position: fixed;
 	}
+}
+
+.site-logo {
+	background-color: $col1-light;
+	// Dimensions
+	height: 130px;
+	// Font, Typography
+	font-family: "PT Sans", sans-serif;
+	@include font-size(100);
+	// Positioning
+	position: relative;
+}
+
+.first-initial {
+	color: $col1-dark;
+	// Positioning
+	position: absolute;
+	left: 30px;
+}
+
+.last-initial {
+	// Colour
+	color: $col2;
+	// Positioning
+	position: absolute;
+	left: 75px;
 }
 
 .nav-main {
@@ -185,7 +233,7 @@ img {
 }
 
 .nav-ext-links {
-	padding-bottom: 5px;
+	padding: 5px 0;
 	// Display
 	display: flex;
 	justify-content: space-around;
@@ -207,6 +255,7 @@ img {
 			fill: white;
 		}
 
+		&:focus path,
 		&:hover path {
 			fill: $col3;
 		}
@@ -218,6 +267,8 @@ img {
 		circle {
 			fill: white;
 		}
+
+		&:focus circle,
 		&:hover circle {
 			fill: $col3;
 		}
@@ -400,8 +451,10 @@ h1 {
 	line-height: 2.0rem;
 
 	a {
+		font-family: "PT Serif", sans-serif;
 		@extend .work-desc;
 
+		&:focus,
 		&:hover {
 			text-decoration: underline;
 		}
@@ -420,6 +473,11 @@ h1 {
 		// Font, Typography
 		@include font-size(14);
 		text-transform: uppercase;
+
+		&:focus,
+		&:hover {
+			@extend .dark-to-light;
+		}
 	}
 	a:nth-of-type(1) {
 		margin-right: 20px;
@@ -448,6 +506,7 @@ h1 {
 	// Content, Padding, Border, Margin
 	padding: 8px;
 	border: none;
+	border-bottom: 5px solid white;
 	margin: 50px 0 50px 25px;
 	// Dimensions
 	width: -moz-max-content;
@@ -457,6 +516,11 @@ h1 {
 	font-family: 'PT Sans', sans-serif;
 	@include font-size(14);
 	text-transform: uppercase;
+
+	&:focus,
+	&:hover {
+		@extend .border-underline;
+	}
 }
 
 .skill {
@@ -484,7 +548,9 @@ h1 {
 	// Content, Padding, Border, Margin
 	margin-top: 10px;
 	// Font, Typography
+	font-family: "PT Sans", sans-serif;
 	@include font-size(14);
+	letter-spacing: 0.1rem;
 	text-align: center;
 	// Transforms, Transitions
 	transition: all 0.25s;
@@ -507,6 +573,7 @@ h1 {
 	h2 {
 		margin: 0;
 	}
+
 	p {
 		margin: 50px 0;
 	}
@@ -515,6 +582,7 @@ h1 {
 		color: $col3;
 		font-weight: bold;
 
+		&:focus,
 		&:hover {
 			text-decoration: underline;
 		}
@@ -522,9 +590,12 @@ h1 {
 }
 
 .contact-form {
-	font-family: "PT Serif", serif;
+	// Dimensions
+	width: 400px;
+	// Font, Typography
 	@include font-size(14);
-
+	// Positioning
+	position: relative;
 }
 
 .label-input-group {
@@ -533,10 +604,12 @@ h1 {
 		// Content, Padding, Border, Margin
 		padding-right: 10px;
 		// Dimensions
-		width: 100px;
+		width: 80px;
 		// Display
 		display: inline-block;
 		text-align: right;
+		// Font, Typography
+		font-family: "PT Sans", sans-serif;
 	}
 
 	input,
@@ -549,6 +622,8 @@ h1 {
 		// Dimensions
 		width: 300px;
 		max-width: 300px;
+		// Font, Typography
+		font-family: "PT Serif", serif;
 		// Outline
 		outline: 2px solid transparent;
 		
@@ -563,11 +638,37 @@ h1 {
 		height: 100px;
 	}
 
-	input[type=submit] {
-		// Colour
-		background-color: #283138;
-		color: white;
-		// Content, Padding, Border, Margin
-		border: none;
+}
+
+input[type=submit] {
+	// Colour
+	background-color: #283138;
+	color: white;
+	// Content, Padding, Border, Margin
+	padding: 8px;
+	border: none;
+	// Font, Typography
+	font-family: "PT Sans", sans-serif;
+	text-transform: uppercase;
+	// Positioning
+	position: absolute;
+	right: 16px;
+
+	&:focus,
+	&:hover {
+		@extend .border-underline;
+	}
+}
+// ==================================================
+// - .page-footer
+// ==================================================
+
+.page-footer {
+	padding: 10px 0;
+
+	p {
+		// Font, Typography
+		@include font-size(14);
+		text-align: right;
 	}
 }

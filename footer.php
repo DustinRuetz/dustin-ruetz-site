@@ -1,7 +1,5 @@
-	<footer>
-		<div class="container">
-			<p>&#169; Copyright <?php echo date('Y'); ?> Dustin Ruetz.</p>
-		</div>
+	<footer class="page-footer">
+		<p>&#169; Copyright <?php echo date('Y'); ?> Dustin Ruetz.</p>
 	</footer>
 
 	<script>

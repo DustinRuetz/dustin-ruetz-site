@@ -4,7 +4,10 @@
 	<div class="page-container">
 		<aside class="nav-sidebar">
 			<div>
-				<figure>DR</figure>
+				<figure class="site-logo">
+					<div class="first-initial">D</div>
+					<div class="last-initial">R</div>
+				</figure>
 				<nav class="nav-main">
 					<?php wp_nav_menu( array(
 						'container' => false,
@@ -216,8 +219,9 @@
 
 				</div>
 			</section>
+		
+			<?php get_footer(); ?>
+
 		</div>
 	</div>
 </main>
-
-<?php get_footer(); ?>
