@@ -4,9 +4,13 @@ http://www.flaticon.com/free-icon/earth-globe-with-continents-maps_44536
 Flat Chrome Frame
 http://www.tinydesignr.com/2015/02/flat-chrome-frame-psd.html
 
-GitHub, LI, Twitter icons
-Icon made by Freepik from www.flaticon.com
+All icons below made by Freepik from www.flaticon.com
 
-http://www.flaticon.com/free-icon/github-logo_37318
-http://www.flaticon.com/free-icon/linkedin_145807
-http://www.flaticon.com/free-icon/twitter_145812
+GitHub, LI, Twitter icons
+	http://www.flaticon.com/free-icon/github-logo_37318
+	http://www.flaticon.com/free-icon/linkedin_145807
+	http://www.flaticon.com/free-icon/twitter_145812
+
+Down Arrow, Menu icons
+	http://www.flaticon.com/free-icon/down-chevron_120890
+	http://www.flaticon.com/free-icon/menu_59165

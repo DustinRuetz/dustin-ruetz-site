@@ -1,10 +1,10 @@
 /*!
-* Theme Name: HackerYou Starter Theme
-* Theme URI: http://hackeryou.com;
-* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Theme Name: dustinruetz.com Theme
+* Theme URI: http://dustinruetz.com
+* Description: Theme customized for dustinruetz.com and adapted from the HackerYou Starter Theme.
 * Version: 1.0
-* Author: HackerYou
-* Author URI: http://hackeryou.com
+* Author: Dustin Ruetz
+* Author URI: http://dustinruetz.com
 */
 
 // ==================================================
@@ -25,18 +25,20 @@
 // ==================================================
 
 html {
+	// Font, Typography
 	font-size: 62.5%;
 }
 
 body {
 	// Colour (default off-black font colour)
 	color: $col3;
-	// Content, Padding, Border, Margin
+	// Box Model
 	padding: 0;
 	margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
+	// Box Model
 	margin: 0;
 }
 
@@ -44,11 +46,11 @@ h1,
 h2,
 h4 {
 	// Font, Typography
-	// font-family: 'PT Serif', serif;
 	font-family: 'PT Sans', sans-serif;
 }
 
 h2 {
+	// Box Model
 	padding: 0 20px 5px 20px;
 	border-left: 5px solid $col1-dark;
 	border-bottom: 5px solid $col1-dark;
@@ -57,18 +59,19 @@ h2 {
 	width: -moz-max-content;
 	width: -webkit-max-content;
 	width: fit-content;
+	// Font, Typography
 	@include font-size(50);
 }
 
 h3 {
 	// Font, Typography
-	// font-family: 'PT Sans', sans-serif;
 	font-family: 'PT Serif', serif;
 	@include font-size(16);
 }
 
 a,
 p {
+	// Box Model
 	margin: 0;
 	// Font, Typography
 	@include font-size(16);
@@ -86,8 +89,10 @@ p {
 }
 
 img {
-	display: block;
+	// Dimensions
 	max-width: 100%;
+	// Display
+	display: block;
 }
 
 // ==================================================
@@ -96,7 +101,7 @@ img {
 // ==================================================
 
 .page-container {
-	// Content, Padding, Border, Margin
+	// Box Model
 	margin: 0 auto;
 	// Dimensions
 	max-width: 1080px;
@@ -106,13 +111,15 @@ img {
 }
 
 .page-content {
-	// Content, Padding, Border, Margin
+	// Box Model
 	padding: 0 100px;
 	// Dimensions
 	width: calc(100% - 164px);
 }
 
 .page-section {
+	// Box Model
+	padding: 25px 0;
 	// Dimensions
 	height: 100vh;
 	// Display
@@ -122,6 +129,7 @@ img {
 }
 
 .dark-to-light {
+	// Transform, Transition
 	transition: all 0.3s;
 	
 	&:focus,
@@ -139,6 +147,7 @@ img {
 	transition: all 0.3s;
 	&:focus,
 	&:hover {
+		// Box Model
 		border-bottom: 5px solid $col1-dark;
 	}
 }
@@ -146,6 +155,30 @@ img {
 // ==================================================
 // -.nav-sidebar
 // ==================================================
+
+#toggle-menu {
+	// Box Model
+	padding: 0;
+	border: none;
+	// Colour
+	background-color: transparent;
+	// Display
+	display: none;
+	// Positioning
+	position: fixed;
+	top: 5px;
+	left: 5px;
+	z-index: 20;
+
+	svg {
+		height: 20px;
+		width: 20px;
+	}
+
+	path {
+		fill: $col3;
+	}
+}
 
 .nav-sidebar {
 	> div {
@@ -163,6 +196,7 @@ img {
 }
 
 .site-logo {
+	// Colour
 	background-color: $col1-light;
 	// Dimensions
 	height: 130px;
@@ -171,29 +205,47 @@ img {
 	@include font-size(100);
 	// Positioning
 	position: relative;
+	// Transform, Transition
+	transition: all 0.25s;
+	// Visibility
+	opacity: 0;
+	
+	&.display-logo {
+		// Visibility
+		opacity: 1;
+	}
+}
+
+.first-initial,
+.last-initial {
+	// Font, Typography
+	text-shadow: 2px 2px 2px $col3;
+	// Positioning
+	position: absolute;
 }
 
 .first-initial {
+	// Colour
 	color: $col1-dark;
 	// Positioning
-	position: absolute;
-	left: 30px;
+	left: 27px;
+	z-index: 20;
 }
 
 .last-initial {
 	// Colour
 	color: $col2;
 	// Positioning
-	position: absolute;
 	left: 75px;
+	z-index: 10;
 }
 
 .nav-main {
-	// Content, Padding, Border, Margin
+	// Box Model
 	padding: 0 40px;
 
 	ul {
-		// Content, Padding, Border, Margin
+		// Box Model
 		padding: 0;
 		margin: 0;
 		// Display
@@ -204,14 +256,14 @@ img {
 	}
 
 	li {
-		// Content, Padding, Border, Margin
+		// Box Model
 		padding: 0;
 		margin: 20px 0;
 	}
 
 	a {
 		color: white;
-		// Content, Padding, Border, Margin
+		// Box Model
 		padding-left: 10px;
 		border-bottom: 2px solid transparent;
 		border-left: 2px solid transparent;
@@ -223,22 +275,26 @@ img {
 
 		&:focus,
 		&:hover {
+			// Box Model
 			border-bottom: 2px solid white;
 		}
 	}
 
 	a.current-section {
+		// Box Model
 		border-left: 2px solid white;
 	}
 }
 
 .nav-ext-links {
+	// Box Model
 	padding: 5px 0;
 	// Display
 	display: flex;
 	justify-content: space-around;
 
 	svg {
+		// Dimensions
 		height: 25px;
 		width: 25px;
 	}
@@ -252,11 +308,13 @@ img {
 	// SVG styling for GitHub link
 	a[href*="github"] {
 		path {
+			// Colour
 			fill: white;
 		}
 
 		&:focus path,
 		&:hover path {
+			// Colour
 			fill: $col3;
 		}
 	}
@@ -265,15 +323,18 @@ img {
 	a[href*="linkedin"],
 	a[href*="twitter"] {
 		circle {
+			// Colour
 			fill: white;
 		}
 
 		&:focus circle,
 		&:hover circle {
+			// Colour
 			fill: $col3;
 		}
 
 		path {
+			// Colour
 			fill: $col1-dark;
 		}
 	}
@@ -283,13 +344,42 @@ img {
 // -.homepage-header
 // ==================================================
 
+.homepage-header {
+	a {
+		// Box Model
+		margin: 0 auto 10px auto;
+
+		&:hover polygon {
+			// Colour
+			fill: $col1-med;
+		}
+	}
+
+	svg {
+		// Dimensions
+		height: 50px;
+		width: 50px;
+	}
+
+	polygon {
+		// Colour
+		fill: $col1-dark;
+		// Transform, Transition
+		transition: all 0.25s;
+	}
+}
+
 .name-occupation {
+	// Box Model
 	margin: auto;
+	// Dimensions
 	height: 287px;
 	width: 336px;
+	// Positioning
 	position: relative;
 
 	h3 {
+		// Colour
 		color: $col2;
 		// Font, Typography
 		@include font-size(24);
@@ -304,6 +394,7 @@ img {
 }
 
 .inner-name {
+	// Box Model
 	border-left: 5px solid $col2;
 	border-bottom: 5px solid $col2;
 	// Positioning
@@ -319,23 +410,27 @@ h1 {
 	text-transform: uppercase;
 }
 
+.first-name,
+.last-name {
+	// Font, Typography
+	text-shadow: 2px 2px 2px $col3;
+}
+
 .first-name {
+	// Colour
 	color: $col1-dark;
 }
 
 .last-name {
-	color: $col2;
-	// Content, Padding, Border, Margin
+	// Box Model
 	padding: 10px 0 10px 10px;
 	border-left: 5px solid $col1-dark;
 	border-bottom: 5px solid $col1-dark;
 	margin: 0 0 10px 10px;
+	// Colour
+	color: $col2;
 	// Font, Typography
 	line-height: 0.85;
-	// Positioning
-	// position: absolute;
-	// top: 100px;
-	// left: 52px;
 }
 
 // ==================================================
@@ -344,18 +439,22 @@ h1 {
 
 #about {
 	h3 {
+		// Box Model
 		margin-bottom: 20px;
 	}
 
 	p {
+		// Font, Typography
 		line-height: 2.4rem;
 	}
 }
 
 .about-content {
+	// Display
 	display: flex;
 
 	img {
+		// Box Model
 		margin-right: 20px;
 		// Dimensions
 		height: 200px;
@@ -368,38 +467,38 @@ h1 {
 // ==================================================
 
 #work {
-	padding: 100px 0;
+	// Box Model
+	padding: 25px 0;
+	margin: 100px 0;
 }
 
 .work-item {
-	// Colour
-	background-color: $col1-light;
-	background-color: $col2;
-	background-color: $col1-med;
-	// Content, Padding, Border, Margin
+	// Box Model
 	padding: 25px;
 	margin-bottom: 50px;
+	// Colour
+	background-color: $col1-med;
 	// Display
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .work-image {
+	// Dimensions
 	width: 40%;
 }
 
 .work-text {
-	padding-left: 50px;
+	// Box Model
+	padding-left: 40px;
 	// Dimensions
 	width: 60%;
 	// Display
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 
 	h4 {
-		// border-left: 5px solid black;
-		// padding-left: 5px;
 		// Font, Typography
 		@include font-size(24);
 		font-weight: bold;
@@ -416,7 +515,7 @@ h1 {
 
 .title-tech {
 	ul {
-		// Content, Padding, Border, Margin
+		// Box Model
 		padding-left: 0;
 		margin: 0;
 		// List
@@ -433,10 +532,10 @@ h1 {
 	}
 
 	li {
+		// Box Model		
+		padding: 0;
 		// Colour
 		color: lighten($col3, 20);
-		// Content, Padding, Border, Margin		
-		padding: 0;
 		// Display
 		display: inline-block;
 		// Font, Typography
@@ -446,16 +545,23 @@ h1 {
 }
 
 .work-desc {
+	// Box Model
+	padding: 20px 0;
+	// Colour
 	color: $col3;
+	// Font, Typography
 	@include font-size(14);
 	line-height: 2.0rem;
 
 	a {
+		// Font, Typography
 		font-family: "PT Serif", sans-serif;
+		
 		@extend .work-desc;
 
 		&:focus,
 		&:hover {
+			// Font, Typography
 			text-decoration: underline;
 		}
 	}
@@ -463,11 +569,11 @@ h1 {
 
 .work-links {
 	a {
+		// Box Model
+		padding: 8px;
 		// Colour
 		background-color: $col3;
 		color: white;
-		// Content, Padding, Border, Margin
-		padding: 8px;
 		// Display
 		display: inline-block;
 		// Font, Typography
@@ -480,6 +586,7 @@ h1 {
 		}
 	}
 	a:nth-of-type(1) {
+		// Box Model
 		margin-right: 20px;
 	}
 }
@@ -490,24 +597,26 @@ h1 {
 
 #skills {
 	div {
+		// Display
 		display: flex;
 		flex-wrap: wrap;
 	}
 
 	h2 {
+		// Box Model
 		margin: 0;
 	}
 }
 
 #toggle-labels {
-	// Colour
-	background-color: $col3;
-	color: white;
-	// Content, Padding, Border, Margin
+	// Box Model
 	padding: 8px;
 	border: none;
 	border-bottom: 5px solid white;
 	margin: 50px 0 50px 25px;
+	// Colour
+	background-color: $col3;
+	color: white;
 	// Dimensions
 	width: -moz-max-content;
 	width: -webkit-max-content;
@@ -524,7 +633,7 @@ h1 {
 }
 
 .skill {
-	// Content, Padding, Border, Margin
+	// Box Model
 	margin-bottom: 40px;
 	// Dimensions
 	width: 25%;
@@ -534,6 +643,7 @@ h1 {
 	align-items: center;
 
 	&:hover .skill-text {
+		// Visibility
 		opacity: 1;
 		visibility: visible;
 	}
@@ -545,7 +655,7 @@ h1 {
 }
 
 .skill-text {
-	// Content, Padding, Border, Margin
+	// Box Model
 	margin-top: 10px;
 	// Font, Typography
 	font-family: "PT Sans", sans-serif;
@@ -570,20 +680,26 @@ h1 {
 // ==================================================
 
 #contact {
+	// height: auto;
 	h2 {
+		// Box Model
 		margin: 0;
 	}
 
 	p {
-		margin: 50px 0;
+		// Box Model
+		margin: 25px 0;
 	}
 
 	a {
+		// Colour
 		color: $col3;
+		// Font, Typography
 		font-weight: bold;
 
 		&:focus,
 		&:hover {
+			// Font, Typography
 			text-decoration: underline;
 		}
 	}
@@ -599,9 +715,11 @@ h1 {
 }
 
 .label-input-group {
+	// Box Model
 	margin-bottom: 25px;
+	
 	label {
-		// Content, Padding, Border, Margin
+		// Box Model
 		padding-right: 10px;
 		// Dimensions
 		width: 80px;
@@ -614,7 +732,7 @@ h1 {
 
 	input,
 	textarea {
-		// Content, Padding, Border, Margin
+		// Box Model
 		padding: 8px;
 		border: 2px solid transparent;
 		border-bottom: 2px solid $col3;
@@ -629,24 +747,26 @@ h1 {
 		
 		&:focus,
 		&:hover {
+			// Box Model
 			border-bottom: 2px solid $col1-med;
 			border-left: 2px solid $col1-med;
 		}
 	}
 
 	textarea {
+		// Dimensions
 		height: 100px;
 	}
 
 }
 
 input[type=submit] {
+	// Box Model
+	padding: 8px;
+	border: none;
 	// Colour
 	background-color: #283138;
 	color: white;
-	// Content, Padding, Border, Margin
-	padding: 8px;
-	border: none;
 	// Font, Typography
 	font-family: "PT Sans", sans-serif;
 	text-transform: uppercase;
@@ -659,12 +779,14 @@ input[type=submit] {
 		@extend .border-underline;
 	}
 }
+
 // ==================================================
 // - .page-footer
 // ==================================================
 
 .page-footer {
-	padding: 10px 0;
+	// Box Model
+	margin: 50px 0 10px 0;
 
 	p {
 		// Font, Typography
@@ -672,3 +794,5 @@ input[type=submit] {
 		text-align: right;
 	}
 }
+
+@import "media-query";

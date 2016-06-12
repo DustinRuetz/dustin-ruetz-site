@@ -1,7 +1,18 @@
 <?php get_header(); ?>
 
-<main id="top">
+<main>
 	<div class="page-container">
+		<button id="toggle-menu">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 92.833 92.833" style="enable-background:new 0 0 92.833 92.833;" xml:space="preserve">
+				<g>
+					<g>
+						<path d="M89.834,1.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V4.75    C92.834,3.096,91.488,1.75,89.834,1.75z"/>
+						<path d="M89.834,36.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V39.75    C92.834,38.096,91.488,36.75,89.834,36.75z"/>
+						<path d="M89.834,71.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V74.75    C92.834,73.095,91.488,71.75,89.834,71.75z"/>
+					</g>
+				</g>
+			</svg>
+		</button>
 		<aside class="nav-sidebar">
 			<div>
 				<figure class="site-logo">
@@ -87,6 +98,11 @@
 					</div>
 					<h3>Front-End Web Developer</h3>
 				</div>
+				<a href="#about">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 407.437 407.437" style="enable-background:new 0 0 407.437 407.437;" xml:space="preserve">
+						<polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815"/>
+					</svg>
+				</a>
 			</header>
 
 			<section id="about" class="page-section">
@@ -96,7 +112,7 @@
 					<img src="<?php echo $profilePicture['url'] ?>" alt="<?php echo $profilePicture['alt'] ?>">
 					<div>
 						<h3>Hello! My name is Dustin Ruetz (pronounced "Ritz" - like the hotel) and I am a front-end web developer headquartered in Toronto, Canada.</h3>
-						<p>I'm passionate about all things related to technology. In my work I strive to develop intelligent technological solutions that help people work smarter so that they can achieve more in less time.</p>
+						<p>I'm passionate about all things related to technology. In my work I strive to develop solutions that help people work smarter so that they can achieve more in less time.</p>
 					</div>
 				</div>
 			</section>
@@ -111,9 +127,9 @@
 							'orderby' => 'meta_value_num',
 							'order' => 'ASC'
 						);
-						
-						$workQuery = new WP_Query($workArgs);
 					?>
+						
+					<?php $workQuery = new WP_Query($workArgs); ?> 
 
 					<?php if( $workQuery -> have_posts() ): ?>
 						<?php while( $workQuery -> have_posts() ) :
@@ -137,11 +153,11 @@
 									} ?>
 									</ul>
 								</div>
-								<p class="work-desc"> <?php the_field('work_desc') ?>
-
-								<?php while(has_sub_field('work_collaborators')) {
-								?>
-								Made in collaboration with <a href="<?php the_sub_field('work_coll_site') ?>" target="_blank"> <?php the_sub_field('work_coll_name') ?> </a>
+								<p class="work-desc">
+									<?php the_field('work_desc') ?>
+									<?php while(has_sub_field('work_collaborators')) {
+									?>
+									Made in collaboration with <a href="<?php the_sub_field('work_coll_site') ?>" target="_blank"> <?php the_sub_field('work_coll_name') ?> </a>
 								</p>
 								<?php
 								} ?>
@@ -162,45 +178,44 @@
 				<button id="toggle-labels">Toggle Labels</button>
 				<div>
 					<figure class="skill">
-						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/html5.svg" alt="">
+						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/html5.svg" alt="Icon for HTML5">
 						<figcaption class="skill-text">HTML5</figcaption>
 					</figure>
 					<figure class="skill">
-						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/css3_full.svg" alt="">
+						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/css3_full.svg" alt="Icon for CSS3">
 						<figcaption class="skill-text">CSS3</figcaption>
 					</figure>
 					<figure class="skill">
-						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/sass.svg" alt="">
+						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/sass.svg" alt="Icon for Sass">
 						<figcaption class="skill-text">Sass</figcaption>
 					</figure>
 					<figure class="skill">
-						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/javascript_1.svg" alt="">
+						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/javascript_1.svg" alt="Icon for JavaScript">
 						<figcaption class="skill-text">JavaScript</figcaption>
 					</figure>
 					<figure class="skill">
-						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/jquery_logo.svg" alt="">
+						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/jquery_logo.svg" alt="Icon for jQuery">
 						<figcaption class="skill-text">jQuery</figcaption>
 					</figure>
 					<figure class="skill">
-						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/gulp.svg" alt="">
+						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/gulp.svg" alt="Icon for Gulp">
 						<figcaption class="skill-text">Gulp</figcaption>
 					</figure>
 					<figure class="skill">
-						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/github_badge.svg" alt="">
+						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/github_badge.svg" alt="Icon for GitHub">
 						<figcaption class="skill-text">GitHub</figcaption>
 					</figure>
 					<figure class="skill">
-						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/wordpress.svg" alt="">
+						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/wordpress.svg" alt="Icon for WordPress">
 						<figcaption class="skill-text">WordPress</figcaption>
 					</figure>
 				</div>
 			</section>
 
 			<section id="contact" class="page-section">
-				<div>
+				<!-- <div> -->
 					<h2>Contact</h2>
-					<p>Send me a message at <a href="mailto:dustinruetz@gmail.com">dustinruetz@gmail.com</a> or by using the form below.</p>
-
+					<p>Email me at <a href="mailto:dustinruetz@gmail.com">dustinruetz@gmail.com</a> or send me a message using the form below.</p>
 					<form class="contact-form" action="http://www.focuspocus.io/magic/dustinruetz@gmail.com" method="POST">
 						<div class="label-input-group">
 							<label for="cf-name">Name</label>
@@ -216,8 +231,7 @@
 						</div>
 						<input type="submit" value="Send Message">
 					</form>
-
-				</div>
+				<!-- </div> -->
 			</section>
 		
 			<?php get_footer(); ?>

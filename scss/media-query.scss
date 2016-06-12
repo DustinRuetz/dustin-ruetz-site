@@ -1,0 +1,227 @@
+@import "variables";
+
+// ==================================================
+// mq-1080px
+// ==================================================
+@media screen and (max-width: 1080px) {
+
+	.work-items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.work-item {
+		padding: 20px;
+		margin: 10px;
+		width: 45%;
+		flex-direction: column;
+	}
+
+	.work-image {
+		width: 100%;
+	}
+
+	.work-text {
+		padding-left:  0;
+		padding-top: 20px;
+		width: 100%;
+
+		h4 {
+			@include font-size(18);
+		}
+	}
+
+	.work-desc {
+		padding: 20px 0;
+	}
+}
+
+// ==================================================
+// mq-950px
+// ==================================================
+@media screen and (max-width: 950px) {
+	.page-content {
+		padding: 0 60px;
+		width: 100%;
+	}
+
+	#toggle-menu {
+		display: block;
+	}
+
+	.nav-sidebar {
+		position: relative;
+		right: 60%;
+		z-index: 10;
+		transition: all 0.3s;
+		&.menu-toggle {
+			right: 0;
+		}
+	}
+
+	.site-logo {
+		height: 70px;
+		@include font-size(50);
+	}
+
+	.first-initial {
+		left: 55px;
+	}
+
+	.last-initial {
+		top: 0;
+		left: 80px;
+	}
+
+	.about-content {
+		width: 90%;
+	}	
+}
+
+// ==================================================
+// mq-850px
+// ==================================================
+@media screen and (max-width: 850px) {
+	.work-item {
+		width: 100%;
+	}
+}
+
+// ==================================================
+// mq-720px
+// ==================================================
+@media screen and (max-width: 720px) {
+	h2 {
+		margin-bottom: 25px;
+	}
+
+	.about-content {
+		flex-direction: column;
+
+		img {
+			margin: 0 auto 25px auto;
+		}
+	}
+
+	#toggle-labels {
+		margin: 30px 0 30px 30px;
+	}
+
+	#contact {
+		p {
+			margin: 30px 0;
+		}
+	}
+}
+
+// ==================================================
+// mq-550px
+// ==================================================
+@media screen and (max-width: 550px) {
+	.page-content {
+		padding: 0 20px 0 50px;
+	}
+
+	.page-section {
+		padding: 25px 0;
+	}
+
+	.name-occupation {
+		height: 235px;
+		width: auto;
+
+		h3 {
+			@include font-size(18);
+			top: 200px;
+		}
+	}
+
+	.inner-name {
+		top: 88px;
+		left: 18px;
+	}
+
+	h1 {
+		@include font-size(75);
+	}
+
+	#skills {
+		height: auto;
+	}
+
+	.skill {
+		width: 50%;
+	}
+	
+	#contact {
+		height: auto;
+	}
+
+}
+
+// ==================================================
+// mq-475px
+// ==================================================
+@media screen and (max-width: 475px) {
+	.contact-form {
+		width: 100%;
+	}
+
+	.label-input-group {
+		label {
+			padding: 0 0 10px 0;
+			width: auto;
+			display: block;
+			text-align: left;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}
+// ==================================================
+// mq-450px
+// ==================================================
+@media screen and (max-width: 450px) {
+	.name-occupation {
+		height: 180px;
+
+		h3 {
+			@include font-size(15);
+			top: 150px;
+		}
+	}
+
+	.inner-name {
+		top: 62px;
+		left: 4px;
+	}
+
+	h1 {
+		@include font-size(50);
+	}
+
+	#about {
+		height: auto;
+	}
+}
+
+// ==================================================
+// mq-350px
+// ==================================================
+@media screen and (max-width: 350px) {
+	.work-item {
+		padding: 15px;
+		margin: 10px 0;
+	}
+
+	.work-links {
+		a:nth-of-type(1) {
+			margin-right: 5px;
+		}
+	}
+}

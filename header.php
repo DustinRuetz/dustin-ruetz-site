@@ -3,6 +3,7 @@
 <head>
 	<?php // Load Meta ?>
 	<title> <?php wp_title('|', true, 'right'); ?> </title>
+	<link rel="icon" href="wp-content/themes/dustin-ruetz-theme/icons/dr-favicon.png">
 	<link rel="pingback" href=" <?php bloginfo( 'pingback_url' ); ?> " />
 	<meta charset=" <?php bloginfo( 'charset' ); ?> " />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
