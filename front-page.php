@@ -111,7 +111,7 @@
 					<?php $profilePicture = get_field('profile_picture'); ?>
 					<img src="<?php echo $profilePicture['url'] ?>" alt="<?php echo $profilePicture['alt'] ?>">
 					<div>
-						<h3>Hello! My name is Dustin Ruetz (pronounced "Ritz" - like the hotel) and I am a front-end web developer headquartered in Toronto, Canada.</h3>
+						<h3><span>Hello!</span> My name is Dustin Ruetz (pronounced "Ritz" - like the hotel) and I am a front-end web developer headquartered in Toronto, Canada.</h3>
 						<p>I'm passionate about all things related to technology. In my work I strive to develop solutions that help people work smarter so that they can achieve more in less time.</p>
 						<p>When I'm not busy admiring flat design or unleashing creative energy through JavaScript, you can find me biking and/or discovering the classics of blues, jazz, R&#38;B, and rock.</p>
 					</div>
