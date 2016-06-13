@@ -14,11 +14,8 @@
 @import "normalize";
 @import "variables";
 @import "typography";
-@import "navigation";
-@import "portfolio";
 @import "sidebar";
 @import "comments";
-@import "footer";
 
 // ==================================================
 // Global element styling
@@ -803,11 +800,6 @@ input[type=submit] {
 	}
 }
 
-
-
-
-
-
 .info-modal {
 	// Colour
 	background-color: rgba(40, 49, 56, 0.8);
@@ -901,11 +893,5 @@ input[type=submit] {
 		background-color: $col1-med;
 	}
 }
-
-
-
-
-
-
 
 @import "media-query";
