@@ -163,8 +163,8 @@
 								<?php
 								} ?>
 								<div class="work-links">
-									<a class="work-live" href="<?php the_field('work_live') ?>">View Live</a>
-									<a class="work-github" href="<?php the_field('work_github') ?>">View Code</a>
+									<a class="work-live" href="<?php the_field('work_live') ?>" target="_blank">View Live</a>
+									<a class="work-github" href="<?php the_field('work_github') ?>" target="_blank">View Code</a>
 								</div>
 							</div>
 						</article>
