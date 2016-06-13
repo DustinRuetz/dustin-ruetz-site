@@ -3,7 +3,7 @@
 <main>
 	<div class="page-container">
 		<button id="toggle-menu">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 92.833 92.833" style="enable-background:new 0 0 92.833 92.833;" xml:space="preserve">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 92.833 92.833" style="enable-background:new 0 0 92.833 92.833;" xml:space="preserve">
 				<g>
 					<g>
 						<path d="M89.834,1.75H3c-1.654,0-3,1.346-3,3v13.334c0,1.654,1.346,3,3,3h86.833c1.653,0,3-1.346,3-3V4.75    C92.834,3.096,91.488,1.75,89.834,1.75z"/>
@@ -27,7 +27,7 @@
 				</nav>
 				<nav class="nav-ext-links">
 					<a href="https://github.com/dustinruetz" target="_blank">
-						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35.318px" height="35.318px" viewBox="0 0 35.318 35.318" style="enable-background:new 0 0 35.318 35.318;" xml:space="preserve">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 35.318 35.318" style="enable-background:new 0 0 35.318 35.318;" xml:space="preserve">
 							<g>
 								<path d="M23.71,34.689c-0.172,0.062-0.345,0.137-0.522,0.168c-0.678,0.121-1.112-0.229-1.116-0.922
 									c-0.009-1.287-0.009-2.572,0.012-3.859c0.022-1.48-0.012-2.941-1.139-4.162c0.67-0.12,1.266-0.204,1.849-0.338
@@ -99,7 +99,7 @@
 					<h3>Front-End Web Developer</h3>
 				</div>
 				<a href="#about">
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 407.437 407.437" style="enable-background:new 0 0 407.437 407.437;" xml:space="preserve">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 407.437 407.437" style="enable-background:new 0 0 407.437 407.437;" xml:space="preserve">
 						<polygon points="386.258,91.567 203.718,273.512 21.179,91.567 0,112.815 203.718,315.87 407.437,112.815"/>
 					</svg>
 				</a>
@@ -113,6 +113,7 @@
 					<div>
 						<h3>Hello! My name is Dustin Ruetz (pronounced "Ritz" - like the hotel) and I am a front-end web developer headquartered in Toronto, Canada.</h3>
 						<p>I'm passionate about all things related to technology. In my work I strive to develop solutions that help people work smarter so that they can achieve more in less time.</p>
+						<p>When I'm not busy admiring flat design or unleashing creative energy through JavaScript, you can find me biking and/or discovering the classics of blues, jazz, R&#38;B, and rock.</p>
 					</div>
 				</div>
 			</section>
