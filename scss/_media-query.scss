@@ -8,11 +8,11 @@
 		max-width: 1350px;
 	}
 }
-// ==================================================
-// mq-1080px
-// ==================================================
-@media screen and (max-width: 1080px) {
 
+// ==================================================
+// mq-1280px
+// ==================================================
+@media screen and (max-width: 1280px) {
 	.work-items {
 		display: flex;
 		flex-wrap: wrap;
@@ -20,10 +20,17 @@
 	}
 
 	.work-item {
-		padding: 20px;
+		background-color: lighten($col1-med, 20);
+		padding: 0;
 		margin: 10px;
+		box-shadow: -5px 5px 0 $col1-med;
 		width: 45%;
 		flex-direction: column;
+	}
+
+	.work-image,
+	.work-text {
+		padding: 10px;
 	}
 
 	.work-image {
@@ -31,12 +38,10 @@
 	}
 
 	.work-text {
-		padding-left:  0;
-		padding-top: 20px;
 		width: 100%;
 
 		h4 {
-			@include font-size(18);
+			@include font-size(24);
 		}
 	}
 
@@ -46,9 +51,9 @@
 }
 
 // ==================================================
-// mq-950px
+// mq-1060px
 // ==================================================
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1060px) {
 	.page-content {
 		padding: 0 60px;
 		margin: 0 auto;
@@ -61,9 +66,10 @@
 
 	.nav-sidebar {
 		position: relative;
-		right: 60%;
+		right: 100%;
 		z-index: 10;
 		transition: all 0.3s;
+
 		&.menu-toggle {
 			height: 100vh;
 			right: 0;
@@ -71,22 +77,24 @@
 	}
 
 	.site-logo {
-		height: 70px;
-		@include font-size(50);
+		height: 86px;
+		@include font-size(75);
 	}
 
 	.first-initial {
-		left: 55px;
-	}
-
-	.last-initial {
-		top: 0;
 		left: 80px;
 	}
 
-	.about-content {
-		// width: 90%; // TBconfirmed
-	}	
+	.last-initial {
+		left: 122px;
+	}
+}
+
+// ==================================================
+// mq-950px
+// ==================================================
+@media screen and (max-width: 950px) {
+
 }
 
 // ==================================================
@@ -99,9 +107,42 @@
 }
 
 // ==================================================
+// mq-800px
+// ==================================================
+@media screen and (max-width: 800px) {
+	.contact-form {
+		width: 100%;
+	}
+
+	.label-input-group {
+		label {
+			padding: 0 0 10px 0;
+			width: auto;
+			display: block;
+			text-align: left;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			max-width: 100%;
+		}
+
+	}
+	
+	input[type=submit] {
+		right: 0;
+	}
+}
+
+// ==================================================
 // mq-780px
 // ==================================================
 @media screen and (max-width: 780px) {
+	#about {
+		height: auto;
+	}
+
 	.about-content {
 		flex-direction: column;
 
@@ -113,11 +154,48 @@
 			margin: 0 auto 25px auto;
 		}
 	}
+
+	#skills {
+		h2 {
+			margin-bottom: 50px;
+		}
+	}
+
+	.skill {
+		margin-bottom: 20px;
+	}
+
+	.skill-icon {
+		width: 50px;
+	}
+
+	.skill-text {
+		visibility: hidden;
+	}
 }
 // ==================================================
 // mq-720px
 // ==================================================
 @media screen and (max-width: 720px) {
+	.name-occupation {
+		height: 300px;
+
+		h3 {
+			@include font-size(28);
+			top: 260px;
+		}
+	}
+
+	h1 {
+		@include font-size(100);
+	}
+
+	.last-name {
+		padding: 0 0 0 10px;
+		top: 105px;
+		left: 52px;
+	}
+
 	h2 {
 		margin-bottom: 25px;
 	}
@@ -146,25 +224,6 @@
 		padding: 25px 0;
 	}
 
-	.name-occupation {
-		height: 235px;
-		width: auto;
-
-		h3 {
-			@include font-size(18);
-			top: 200px;
-		}
-	}
-
-	.inner-name {
-		top: 88px;
-		left: 18px;
-	}
-
-	h1 {
-		@include font-size(75);
-	}
-
 	#skills {
 		height: auto;
 	}
@@ -180,65 +239,87 @@
 }
 
 // ==================================================
-// mq-475px
+// mq-520px
 // ==================================================
-@media screen and (max-width: 475px) {
-	.contact-form {
-		width: 100%;
-	}
-
-	.label-input-group {
-		label {
-			padding: 0 0 10px 0;
-			width: auto;
-			display: block;
-			text-align: left;
-		}
-
-		input,
-		textarea {
-			width: 100%;
-			max-width: 100%;
-		}
-	}
-}
-// ==================================================
-// mq-450px
-// ==================================================
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 520px) {
 	.name-occupation {
-		height: 180px;
+		height: 200px;
 
 		h3 {
-			@include font-size(15);
-			top: 150px;
+			font-size: 2.4rem;
+			text-align: right;
+			top: 140px;
 		}
 	}
-
-	.inner-name {
-		top: 62px;
-		left: 4px;
-	}
-
+	
 	h1 {
 		@include font-size(50);
+		text-shadow: 1px 1px 0 $col3;
 	}
 
-	#about {
-		height: auto;
+	.last-name {
+		border-bottom: 5px solid #79d2ff;
+		border-left: 5px solid #79d2ff;
+		box-shadow: -5px 5px 0 #46c1ff;
+		line-height: 60px;
+		top: 55px;
+		left: 22px; 
 	}
+
 }
 
 // ==================================================
-// mq-350px
+// mq-400px
 // ==================================================
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
+	.nav-sidebar {
+		> div {
+			border-right: none;
+			width: 100%;
+		}
+	}
+
+	.first-initial {
+		left: calc(65% - 100px);
+	}
+
+	.last-initial {
+		left: calc(76% - 100px);
+	}
+
+	.nav-main {
+		ul {
+			margin: 0 auto;
+			width: -moz-max-content;
+			width: -webkit-max-content;
+			width: fit-content;
+			text-align: center;
+		}
+	}
+
+	h2 {
+		padding: 0 10px 2px 10px;
+		@include font-size(36)
+	}
+
 	.work-item {
-		padding: 15px;
 		margin: 10px 0;
 	}
 
+	.work-desc {
+		@include font-size(14);
+
+		a {
+			@include font-size(14);
+		}
+	}
+
 	.work-links {
+		a {
+			padding: 2px;
+			@include font-size(14);
+		}
+
 		a:nth-of-type(1) {
 			margin-right: 5px;
 		}

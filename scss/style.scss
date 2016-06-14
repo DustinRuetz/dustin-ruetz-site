@@ -43,29 +43,34 @@ h1,
 h2,
 h4 {
 	// Font, Typography
-	font-family: 'PT Sans', sans-serif;
+	// font-family: 'PT Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 h2 {
 	// Box Model
 	padding: 0 20px 5px 20px;
-	border-left: 5px solid $col1-dark;
-	border-bottom: 5px solid $col1-dark;
+	border-left: 8px solid $col1-med;
+	border-bottom: 8px solid $col1-med;
 	margin-bottom: 50px;
+	box-shadow: -8px 8px 0 $col3;
 	// Color
-	color: $col1-dark;
+	// color: $col1-med; // TBconfirmed
+	color: $col3; //TBconfirmed
 	// Dimensions
 	width: -moz-max-content;
 	width: -webkit-max-content;
 	width: fit-content;
 	// Font, Typography
 	@include font-size(50);
+	text-transform: uppercase;
 }
 
 h3 {
 	// Font, Typography
-	font-family: 'PT Serif', serif;
-	@include font-size(16);
+	// font-family: 'PT Serif', serif; // TBdeleted
+	font-family: 'PT Sans', sans-serif;
+	@include font-size(18); // TBconfirmed (was 16)
 }
 
 a,
@@ -73,18 +78,20 @@ p {
 	// Box Model
 	margin: 0;
 	// Font, Typography
-	@include font-size(16);
+	@include font-size(18); // TBconfirmed (was 16)
 }
 
 a {
 	// Font, Typography
-	font-family: 'PT Sans', sans-serif;
+	// font-family: 'PT Sans', sans-serif; // TBdeleted
+	font-family: 'Raleway', sans-serif;
 	text-decoration: none;
 }
 
 p {
 	// Font, Typography
-	font-family: 'PT Serif', serif;
+	// font-family: 'PT Serif', serif;
+	font-family: 'PT Sans', sans-serif;
 }
 
 img {
@@ -111,9 +118,9 @@ img {
 
 .page-content {
 	// Box Model
-	padding: 0 100px;
+	padding: 0 75px;
 	// Dimensions
-	width: calc(100% - 164px);
+	width: calc(100% - 253px);
 	max-width: 1170px;
 }
 
@@ -148,7 +155,7 @@ img {
 	&:focus,
 	&:hover {
 		// Box Model
-		border-bottom: 5px solid $col1-dark;
+		border-bottom: 5px solid $col1-med;
 	}
 }
 
@@ -166,13 +173,13 @@ img {
 	display: none;
 	// Positioning
 	position: fixed;
-	top: 5px;
-	left: 5px;
+	top: 10px;
+	left: 10px;
 	z-index: 20;
 
 	&:focus path,
 	&:hover path {
-		fill: $col1-med;
+		fill: lighten($col1-med, 10);
 	}
 
 	svg {
@@ -193,8 +200,10 @@ img {
 	// Dimensions
 	height: 100%;
 	> div {
+		// Box Model
+		border-right: 5px solid $col3;
 		// Colour
-		background-color: $col1-dark;
+		background-color: $col1-med;
 		// Dimensions
 		height: 100vh;
 		// Display
@@ -208,11 +217,11 @@ img {
 
 .site-logo {
 	// Colour
-	background-color: $col1-light;
+	color: white;
 	// Dimensions
-	height: 130px;
+	height: 115px;
 	// Font, Typography
-	font-family: "PT Sans", sans-serif;
+	font-family: "Raleway", sans-serif;
 	@include font-size(100);
 	// Positioning
 	position: relative;
@@ -234,24 +243,18 @@ img {
 }
 
 .first-initial {
-	// Colour
-	color: $col1-dark;
 	// Positioning
-	left: 27px;
-	z-index: 20;
+	left: 62px;
 }
 
 .last-initial {
-	// Colour
-	color: $col2;
 	// Positioning
-	left: 75px;
-	z-index: 10;
+	left: 120px;
 }
 
 .nav-main {
 	// Box Model
-	padding: 0 40px;
+	padding: 0 72px;
 
 	ul {
 		// Box Model
@@ -273,11 +276,12 @@ img {
 	a {
 		color: white;
 		// Box Model
-		padding-left: 10px;
-		border-bottom: 2px solid transparent;
-		border-left: 2px solid transparent;
+		padding-left: 5px;
+		border-bottom: 4px solid transparent;
+		border-left: 4px solid transparent;
 		// Font, Typography
-		@include font-size(18);
+		@include font-size(20);
+		letter-spacing: 0.1rem;
 		text-transform: uppercase;
 		// Transform, Transition
 		transition: all 0.25s;
@@ -285,19 +289,20 @@ img {
 		&:focus,
 		&:hover {
 			// Box Model
-			border-bottom: 2px solid white;
+			border-bottom: 4px solid white;
+			border-left: 4px solid white;
 		}
 	}
 
 	a.current-section {
 		// Box Model
-		border-left: 2px solid white;
+		border-left: 4px solid white;
 	}
 }
 
 .nav-ext-links {
 	// Box Model
-	padding: 5px 0;
+	padding-bottom: 20px;
 	// Display
 	display: flex;
 	justify-content: space-around;
@@ -344,7 +349,7 @@ img {
 
 		path {
 			// Colour
-			fill: $col1-dark;
+			fill: $col1-med;
 		}
 	}
 }
@@ -356,11 +361,11 @@ img {
 .homepage-header {
 	a {
 		// Box Model
-		margin: 0 auto 10px auto;
+		margin: 0 auto;
 
 		&:hover polygon {
 			// Colour
-			fill: $col1-med;
+			fill: lighten($col1-med, 10);
 		}
 	}
 
@@ -372,7 +377,7 @@ img {
 
 	polygon {
 		// Colour
-		fill: $col1-dark;
+		fill: $col3;
 		// Transform, Transition
 		transition: all 0.25s;
 	}
@@ -382,58 +387,49 @@ img {
 	// Box Model
 	margin: auto;
 	// Dimensions
-	height: 287px;
-	width: 336px;
+	height: 375px;
 	// Positioning
 	position: relative;
 
 	h3 {
 		// Colour
-		color: $col2;
+		color: lighten($col1-med, 10);
 		// Font, Typography
-		@include font-size(24);
-		font-family: 'PT Sans', sans-serif;
+		@include font-size(40);
+		font-family: 'Raleway', sans-serif;
 		font-weight: normal;
 		text-transform: lowercase;
 		// Positioning
 		position: absolute;
-		top: 250px;
+		top: 320px;
 		right: 0;
 	}
 }
 
-.inner-name {
-	// Box Model
-	border-left: 5px solid $col2;
-	border-bottom: 5px solid $col2;
-	// Positioning
-	position: absolute;
-	top: 120px;
-	left: 36px;
-}
-
 h1 {
-	// Font, Typography
-	@include font-size(100);
-	font-weight: normal;
-	text-transform: uppercase;
-}
-
-.first-name {
 	// Colour
-	color: $col1-dark;
+	color: $col1-med;
+	// Font, Typography
+	@include font-size(150);
+	font-weight: bold;
+	text-shadow: 2px 2px 0 $col3;
+	text-transform: uppercase;
+	// Positioning
+	position: relative;
 }
 
 .last-name {
 	// Box Model
-	padding: 10px 0 10px 10px;
-	border-left: 5px solid $col1-dark;
-	border-bottom: 5px solid $col1-dark;
-	margin: 0 0 10px 10px;
-	// Colour
-	color: $col2;
+	padding: 0 0 10px 10px;
+	border-bottom: 10px solid lighten($col1-med, 10);
+	border-left: 10px solid lighten($col1-med, 10);
+	box-shadow: -10px 10px 0 $col1-med;
 	// Font, Typography
-	line-height: 0.85;
+	line-height: 120px;
+	// Positioning
+	position: absolute;
+	top: 160px;
+	left: 88px;
 }
 
 // ==================================================
@@ -452,25 +448,25 @@ h1 {
 }
 
 .about-content {
+	// Box Model
+	margin: 0 auto;
 	// Dimensions
-	// max-width: 750px; // TBdeleted
+	max-width: 780px;
 	// Display
 	display: flex;
 
 	img {
 		// Box Model
 		margin-right: 20px;
+		box-shadow: -5px 5px 0 $col1-med;
 		// Dimensions
 		height: 200px;
 		width: 200px;
 	}
 
-	div {
-		max-width: 505px;
-	}
-
 	h3 {
 		// Font, Typography
+		@include font-size(18);
 		font-weight: normal;
 	}
 
@@ -494,8 +490,7 @@ h1 {
 	// Box Model
 	padding: 25px;
 	margin-bottom: 50px;
-	// Colour
-	background-color: $col1-med;
+	box-shadow: 70px -70px 0 0 $col1-med inset;
 	// Display
 	display: flex;
 	flex-wrap: wrap;
@@ -507,7 +502,7 @@ h1 {
 
 .work-text {
 	// Box Model
-	padding-left: 40px;
+	padding-left: 30px;
 	// Display
 	display: flex;
 	flex-direction: column;
@@ -515,7 +510,7 @@ h1 {
 
 	h4 {
 		// Font, Typography
-		@include font-size(24);
+		@include font-size(30);
 		font-weight: bold;
 		letter-spacing: 0.15rem;
 		text-transform: uppercase;
@@ -565,14 +560,15 @@ h1 {
 	// Colour
 	color: $col3;
 	// Font, Typography
-	@include font-size(14);
+	@include font-size(18);
 	line-height: 2.0rem;
 
 	a {
+		// Colour
+		color: $col3;
 		// Font, Typography
-		font-family: "PT Serif", sans-serif;
-		
-		@extend .work-desc;
+		font-family: "PT Sans", sans-serif;
+		@include font-size(18);
 
 		&:focus,
 		&:hover {
@@ -586,23 +582,27 @@ h1 {
 	a {
 		// Box Model
 		padding: 8px;
+		border: 5px solid transparent;
 		// Colour
 		background-color: $col3;
 		color: white;
 		// Display
 		display: inline-block;
 		// Font, Typography
-		@include font-size(14);
+		font-family: 'PT Sans', sans-serif;
+		@include font-size(18);
 		text-transform: uppercase;
+		// Transform, Transition
+		transition: all 0.25s;
 
 		&:focus,
 		&:hover {
-			@extend .dark-to-light;
+			border: 5px solid lighten($col3, 50);
 		}
 	}
 	a:nth-of-type(1) {
 		// Box Model
-		margin-right: 20px;
+		margin-right: 10px;
 	}
 }
 
@@ -616,35 +616,6 @@ h1 {
 		display: flex;
 		flex-wrap: wrap;
 	}
-
-	h2 {
-		// Box Model
-		margin: 0;
-	}
-}
-
-#toggle-labels {
-	// Box Model
-	padding: 8px;
-	border: none;
-	border-bottom: 5px solid white;
-	margin: 50px 0 50px 25px;
-	// Colour
-	background-color: $col3;
-	color: white;
-	// Dimensions
-	width: -moz-max-content;
-	width: -webkit-max-content;
-	width: fit-content;
-	// Font, Typography
-	font-family: 'PT Sans', sans-serif;
-	@include font-size(14);
-	text-transform: uppercase;
-
-	&:focus,
-	&:hover {
-		@extend .border-underline;
-	}
 }
 
 .skill {
@@ -656,11 +627,12 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	// Transform, Transition
+	transition: all 0.25s;
 
-	&:hover .skill-text {
-		// Visibility
-		opacity: 1;
-		visibility: visible;
+	&:hover {
+		// Transform, Transition
+		transform: scale(1.2);
 	}
 }
 
@@ -680,8 +652,8 @@ h1 {
 	// Transforms, Transitions
 	transition: all 0.25s;
 	// Visibility
-	opacity: 0;
-	visibility: hidden;
+	// opacity: 0;
+	// visibility: hidden;
 
 	&.label-toggle {
 		// Visibility
@@ -695,7 +667,8 @@ h1 {
 // ==================================================
 
 #contact {
-	// height: auto;
+	height: auto;
+
 	h2 {
 		// Box Model
 		margin: 0;
@@ -703,7 +676,7 @@ h1 {
 
 	p {
 		// Box Model
-		margin: 25px 0;
+		margin: 50px 0;
 	}
 
 	a {
@@ -722,9 +695,9 @@ h1 {
 
 .contact-form {
 	// Dimensions
-	width: 400px;
+	max-width: 650px;
 	// Font, Typography
-	@include font-size(14);
+	@include font-size(18);
 	// Positioning
 	position: relative;
 }
@@ -737,7 +710,7 @@ h1 {
 		// Box Model
 		padding-right: 10px;
 		// Dimensions
-		width: 80px;
+		width: 100px;
 		// Display
 		display: inline-block;
 		text-align: right;
@@ -753,10 +726,10 @@ h1 {
 		border-bottom: 2px solid $col3;
 		border-left: 2px solid $col3;
 		// Dimensions
-		width: 300px;
-		max-width: 300px;
+		width: 540px;
+		max-width: 540px;
 		// Font, Typography
-		font-family: "PT Serif", serif;
+		font-family: "PT Sans", sans-serif;
 		// Outline
 		outline: 2px solid transparent;
 		
@@ -769,6 +742,8 @@ h1 {
 	}
 
 	textarea {
+		// Box Model
+		padding: 0 8px;
 		// Dimensions
 		height: 100px;
 	}
@@ -778,7 +753,7 @@ h1 {
 input[type=submit] {
 	// Box Model
 	padding: 8px;
-	border: none;
+	border: 5px solid transparent;
 	// Colour
 	background-color: #283138;
 	color: white;
@@ -787,11 +762,13 @@ input[type=submit] {
 	text-transform: uppercase;
 	// Positioning
 	position: absolute;
-	right: 16px;
+	right: 8px;
+	// Transform, Transition
+	transition: all 0.25s;
 
 	&:focus,
 	&:hover {
-		@extend .border-underline;
+		border: 5px solid lighten($col3, 50);
 	}
 }
 
@@ -809,15 +786,25 @@ input[type=submit] {
 		text-align: right;
 	}
 
+	a:hover path {
+		// Colour
+		fill: lighten($col1-med, 10);
+	}
+
 	svg {
+		// Dimensions
 		height: 15px;
 		width: 20px;
 	}
 
 	path {
+		// Colour
 		fill: $col3;
+		// Transform, Transition
+		transition: all 0.25s;
 	}
 }
+
 
 .info-modal {
 	// Colour
@@ -838,7 +825,7 @@ input[type=submit] {
 
 	h4 {
 		// Font, Typography
-		font-family: "PT Sans", sans-serif;
+		font-family: "Raleway", sans-serif;
 		@include font-size(24);
 		text-align: center;
 	}

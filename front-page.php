@@ -92,10 +92,7 @@
 
 			<header class="homepage-header page-section">
 				<div class="name-occupation">
-					<h1 class="first-name">Dustin</h1>
-					<div class="inner-name">
-						<h1 class="last-name">Ruetz</h1>
-					</div>
+					<h1><span class="first-name">Dustin</span><br><span class="last-name">Ruetz</span></h1>
 					<h3>Front-End Web Developer</h3>
 				</div>
 				<a href="#about">
@@ -176,7 +173,7 @@
 
 			<section id="skills" class="page-section">
 				<h2>Skills</h2>
-				<button id="toggle-labels">Toggle Labels</button>
+				<!-- <button id="toggle-labels">Toggle Labels</button> -->
 				<div>
 					<figure class="skill">
 						<img class="skill-icon" src="wp-content/themes/dustin-ruetz-theme/dev-icons/html5.svg" alt="Icon for HTML5">
@@ -219,15 +216,15 @@
 					<p>Email me at <a href="mailto:dustinruetz@gmail.com">dustinruetz@gmail.com</a> or send me a message using the form below.</p>
 					<form class="contact-form" action="http://www.focuspocus.io/magic/dustinruetz@gmail.com" method="POST">
 						<div class="label-input-group">
-							<label for="cf-name">Name</label>
+							<label for="cf-name">Name*</label>
 							<input id="cf-name" class="cf-field" type="text" name="fullname" required="true">
 						</div>
 						<div class="label-input-group">
-							<label for="cf-email">Email</label>
+							<label for="cf-email">Email*</label>
 							<input id="cf-email" class="cf-field" type="email" name="emailaddress" required="true">
 						</div>
 						<div class="label-input-group">
-							<label for="cf-message">Message</label>
+							<label for="cf-message">Message*</label>
 							<textarea id="cf-message" class="cf-field" name="message" cols="30" rows="10" required="true"></textarea>
 						</div>
 						<input type="submit" value="Send Message">
