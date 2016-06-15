@@ -8,6 +8,6 @@ $col2: rgb(103, 198, 190);       // #67c6be   off-green
 $col3: rgb(40, 49, 56);          // #283138   off-black
 
 @mixin font-size($fsValue: 0.625) {
-  font-size: $fsValue + px;
-  font-size: ($fsValue / 10) + rem;
+	font-size: $fsValue + px;
+	font-size: ($fsValue / 10) + rem;
 }
