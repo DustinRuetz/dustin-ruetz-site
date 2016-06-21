@@ -7,6 +7,7 @@ $(function() {
 drSite.init = function() {
 	drSite.headerHeight = $(".name-occupation").outerHeight(true);
 	drSite.logoDisplay();
+	drSite.formValidation();
 };
 
 drSite.logoDisplay = function() {
@@ -17,6 +18,19 @@ drSite.logoDisplay = function() {
 		} else {
 			$(".site-logo").removeClass("display-logo");
 		}
+	});
+};
+
+drSite.formValidation = function() {
+	$("input[type=submit]").on("click", function(event) {
+		if(
+			$("#cf-name").val() === "" ||
+			$("#cf-email").val() === "" ||
+			$("#cf-message").val() === ""
+		) {
+			event.preventDefault();
+			alert("You missed a required field; please complete the form and then resubmit.");
+		};
 	});
 };
 
@@ -70,10 +84,4 @@ $("#toggle-menu").on("click", function(event) {
 // Re-hide .nav-sidebar when a link is clicked
 $(".nav-sidebar a").on("click", function() {
 	$(".nav-sidebar").toggleClass("menu-toggle");
-});
-
-// #toggle-labels button in the Skills section
-$("#toggle-labels").on("click", function(event) {
-	event.preventDefault();
-	$(".skill-text").toggleClass("label-toggle");
 });
